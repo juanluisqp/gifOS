@@ -1,0 +1,45 @@
+@import "_paletaDeColores.scss";
+
+
+.barraGradient {
+    background-image: $barraDay;
+}
+
+.banner {
+    p {
+        color: $textoDay;
+    }
+}
+
+
+.inicio {
+   .upper-btn {
+        .boton {
+            background-color:$botonDay;
+            &:hover {
+                background-color: $botonDayHover; 
+                outline: 1px dotted #110038;
+                outline-offset: -5px;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                }
+        }
+    }
+}
+
+.dropdownTemas {
+    position: absolute;
+    left: 16px;
+    top: 38px;
+    width: 184px;
+    height: 102px;
+    
+
+    ul {
+        background-color: #E6E6E6;
+
+        li {
+           background-color: #F0F0F0;
+           
+        }
+    }
+}
