@@ -48,12 +48,11 @@
                 top: 38px;
                 width: 184px;
                 height: 102px;
-                
 
-                ul {
+                
+               ul {
                     padding: 10px;
                     
-
                     li {
                         @extend %textoRegular;
                         padding: 10px;
@@ -99,5 +98,12 @@
             }
 
         }
+    }
+}
+
+.desplegable {
+    &:checked ~ .dropdownTemas  {
+        display:none;
+
     }
 }
