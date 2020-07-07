@@ -1,1 +1,33 @@
-/* No CSS *//*# sourceMappingURL=sailorNight.css.map */
+body {
+  background-color: #110038;
+}
+
+.barraGradient {
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+}
+
+.banner p {
+  color: #FFFFFF;
+}
+
+.inicio .upper-btn .boton {
+  background-color: #F7C9F3;
+}
+
+.inicio .upper-btn .boton:hover {
+  background-color: #E6BBE2;
+  outline: 1px dotted #110038;
+  outline-offset: -5px;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.dropdownTemas ul {
+  background-color: #E6E6E6;
+}
+
+.dropdownTemas ul li {
+  background-color: #F0F0F0;
+}
+/*# sourceMappingURL=sailorNight.css.map */

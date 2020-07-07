@@ -1,10 +1,10 @@
 @import "_paletaDeColores.scss";
 
 body {
-    background-color: $bodyDia;
+    background-color: $bodyNoche;
 }
 .barraGradient {
-    background-image: $barraDay;
+    background-image: $barraNight;
 }
 
 .banner {
