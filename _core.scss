@@ -14,7 +14,7 @@
     box-shadow: 0 1px 0 0;
 
     p {
-        @extend %textoRegular;
+        @extend %textRegular;
     }
 }
 
@@ -49,20 +49,22 @@
                 width: 184px;
                 height: 102px;
 
-                
-               ul {
+
+                ul {
                     padding: 10px;
-                    
+
                     li {
-                        @extend %textoRegular;
+                        @extend %textRegular;
                         padding: 10px;
                         border: 1px solid #808080;
                         box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-                        &:nth-child(2){
+
+                        &:nth-child(2) {
                             margin-top: 10px;
                         }
-                        &:hover{
-                            cursor:pointer;
+
+                        &:hover {
+                            cursor: pointer;
                         }
                     }
                 }
@@ -102,8 +104,30 @@
 }
 
 .desplegable {
-    &:checked ~ .dropdownTemas  {
-        display:none;
+    &:checked~.dropdownTemas {
+        display: none;
 
     }
 }
+
+
+    .search {
+        background: #E6E6E6;
+box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        h2 {
+            @extend %textBold;
+            color: $textDay;
+            padding: 3px;
+        }
+
+        .searchBar {
+            width: 50%;
+            height: 48px;
+            box-sizing: border-box;
+            background: #FFFFFF;
+            border: 1px solid #979797;
+            box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+            padding: 13px 16px;
+            margin: 12px 8px 12px 15px;
+        }
+    }
