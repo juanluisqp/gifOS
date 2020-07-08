@@ -30,4 +30,9 @@ body {
 .dropdownTemas ul li {
   background-color: #F0F0F0;
 }
+
+.buscador h2 {
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+}
 /*# sourceMappingURL=sailorDay.css.map */

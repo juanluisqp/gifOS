@@ -53,6 +53,11 @@ table {
   font-weight: 400;
 }
 
+.search h2 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 700;
+}
+
 .inicio .upper-btn .boton {
   width: 144px;
   height: 36px;
@@ -187,5 +192,29 @@ table {
 
 .desplegable:checked ~ .dropdownTemas {
   display: none;
+}
+
+.search {
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.search h2 {
+  color: #FFFFFF;
+  padding: 3px;
+}
+
+.search .searchBar {
+  width: 50%;
+  height: 48px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #979797;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+  padding: 13px 16px;
+  margin: 12px 8px 12px 15px;
 }
 /*# sourceMappingURL=style.css.map */

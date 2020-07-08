@@ -12,15 +12,33 @@ body {
 }
 
 .inicio .upper-btn .boton {
-  background-color: #F7C9F3;
+  background-color: #EE3EFE;
+  color: #FFFFFF;
 }
 
 .inicio .upper-btn .boton:hover {
-  background-color: #E6BBE2;
+  background-color: #CE36DB;
   outline: 1px dotted #110038;
   outline-offset: -5px;
   -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
           box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.inicio .upper-btn .boton img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.inicio .upper-btn p {
+  color: #FFFFFF;
+}
+
+.inicio .upper-btn p:hover {
+  outline: 1px dotted #FFFFFF;
+}
+
+.inicio .upper-btn p:active {
+  outline: transparent;
 }
 
 .dropdownTemas ul {
@@ -29,5 +47,11 @@ body {
 
 .dropdownTemas ul li {
   background-color: #F0F0F0;
+}
+
+.buscador
+h2 {
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
 }
 /*# sourceMappingURL=sailorNight.css.map */

@@ -1,15 +1,15 @@
 @import "_paletaDeColores.scss";
 
 body {
-    background-color: $bodyDia;
+    background-color: $bodyDay;
 }
 .barraGradient {
-    background-image: $barraDay;
+    background-image: $barDay;
 }
 
 .banner {
     p {
-        color: $textoDay;
+        color: $textDay;
     }
 }
 
@@ -17,9 +17,9 @@ body {
 .inicio {
    .upper-btn {
         .boton {
-            background-color:$botonDay;
+            background-color:$buttonDay;
             &:hover {
-                background-color: $botonDayHover; 
+                background-color: $buttonDayHover; 
                 outline: 1px dotted #110038;
                 outline-offset: -5px;
                 box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
@@ -37,5 +37,11 @@ body {
            background-color: #F0F0F0;
            
         }
+    }
+}
+
+.buscador {
+    h2 {
+        background-image: $barDay;
     }
 }

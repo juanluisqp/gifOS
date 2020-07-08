@@ -1,15 +1,15 @@
 @import "_paletaDeColores.scss";
 
 body {
-    background-color: $bodyNoche;
+    background-color: $bodyNight;
 }
 .barraGradient {
-    background-image: $barraNight;
+    background-image: $barNight;
 }
 
 .banner {
     p {
-        color: $textoDay;
+        color: $textDay;
     }
 }
 
@@ -17,13 +17,32 @@ body {
 .inicio {
    .upper-btn {
         .boton {
-            background-color:$botonDay;
+            background-color:$buttonNight;
+            color: $textDay;
             &:hover {
-                background-color: $botonDayHover; 
+                background-color: $buttonNightHover; 
                 outline: 1px dotted #110038;
                 outline-offset: -5px;
                 box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
                 }
+                
+                img {
+                    filter: invert(100%);
+                }
+                
+        }
+
+        p {
+            color: $textDay;
+
+            &:hover {
+                outline: 1px dotted $textDay;
+
+            }
+
+            &:active {
+                outline: transparent;
+            }
         }
     }
 }
@@ -39,3 +58,8 @@ body {
         }
     }
 }
+
+.buscador
+    h2 {
+        background-image: $barNight;
+    }
