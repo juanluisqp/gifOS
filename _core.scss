@@ -48,6 +48,7 @@
                 top: 38px;
                 width: 184px;
                 height: 102px;
+                z-index: 1;
 
 
                 ul {
@@ -110,24 +111,215 @@
     }
 }
 
-
+.buscador {
+    position: relative;
     .search {
-        background: #E6E6E6;
-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        margin-bottom: 64px;
         h2 {
             @extend %textBold;
-            color: $textDay;
             padding: 3px;
         }
 
-        .searchBar {
-            width: 50%;
-            height: 48px;
-            box-sizing: border-box;
-            background: #FFFFFF;
-            border: 1px solid #979797;
-            box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
-            padding: 13px 16px;
-            margin: 12px 8px 12px 15px;
+        .seccionBusqueda {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .searchBar {
+                width: 85%;
+                height: 48px;
+                box-sizing: border-box;
+                background: #FFFFFF;
+                border: 1px solid #979797;
+                box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+                padding: 13px 16px;
+                margin: 12px 8px 12px 15px;
+            }
+
+            .botonBuscar {
+
+                width: 12%;
+                height: 36px;
+                margin-left: 8px;
+                margin-right: 18px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                border: 1px solid #808080;
+                box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+                box-sizing: border-box;
+                padding: 10px 30px;
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+
+                p {
+                    @extend %textRegular;
+                }
+            }
+        }
+
+    }
+
+    .searchRelacionados {
+        position: absolute;
+        z-index: 1;
+        width:100%;
+        background-color: #F0F0F0;
+        padding: 16px 0 17px 15px;
+        box-sizing: border-box;
+        margin-top: -64px;
+        display: none;
+
+        ul {
+            
+
+            li {
+                @extend %textRegular;
+                padding: 6px 0 6px 15px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                width:83%;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:hover {
+                    outline: 1px dotted #110038;
+                    outline-offset: -2px;
+                }
+
+
+            }
         }
     }
+}
+
+.sugerencias {
+    h3 {
+        @extend %textRegular;
+        width: 100%;
+        height: 32px;
+        margin-bottom: 30px;
+        padding: 7px;
+        box-sizing: border-box;
+    }
+
+    .bloqueSugerencia {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 20px;
+        margin-bottom: 50px;
+
+        .sugerido {
+            height: auto;
+            display: grid;
+            position: relative;
+
+            h2 {
+                @extend %textBold;
+                width: 100%;
+                padding: 3px;
+                box-sizing: border-box;
+                color: $textDay;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                img {
+                    width: 16px;
+                    height: 14px;
+
+                    &:hover {
+                        outline: transparent;
+                    }
+                }
+
+            }
+
+            img {
+                width: 98.5%;
+                height: 303px;
+                justify-self: center;
+
+                &:hover {
+                    outline: 1px dotted #110038;
+                    outline-offset: -2px;
+                }
+            }
+
+            .verMas {
+                @extend %textRegular;
+                color: $textDay;
+                background-color: #2E32FB;
+                width: 81px;
+                height: 34px;
+                position: absolute;
+                top: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #4C2F99;
+                box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
+                top: 85%;
+                left: 5%;
+                cursor: pointer;
+
+                &:hover {
+                    outline: 1px dotted #110038;
+                    outline-offset: -5px;
+                }
+            }
+        }
+    }
+}
+
+.tendencias {
+    h3 {
+        @extend %textRegular;
+        width: 100%;
+        height: 32px;
+        margin-bottom: 30px;
+        padding: 7px;
+        box-sizing: border-box;
+    }
+
+    .trendy {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+
+        div {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+
+                &:hover~p {
+                    color: $textDay;
+                }
+            }
+
+            p {
+                @extend %textBold;
+                position: absolute;
+                bottom: 0;
+                text-align: center;
+                width: 100%;
+                display: none;
+
+            }
+        }
+
+    }
+}

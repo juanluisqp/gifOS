@@ -6,45 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GifOS</title>
     <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="sailorDay.css" rel="stylesheet" type="text/css" id="colorTheme">
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div class="banner barraGradient">
-            <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
-        </div>
-    </header>
-    <section id="inicio" class="container inicio">
-        <img class="logo" alt="logo" src="imagenes/gifOF_logo.png">
-        <div class="upper-btn">
-            <div class="boton">Crear guifos</div>
-            
-            <label for="themes" class="themes">
-                <div class="boton">Elegir tema</div>
-                <div class="boton dropdown"><img alt="dropdown" src="imagenes/dropdown.svg"></div>
-                <input type="checkbox" id="themes" class="desplegable" checked hidden>
-                <div class="dropdownTemas">
-                    <ul>
-                        <li id="temaDia"><span class="underline">S</span>ailor Day</li>
-                        <li id="temaNoche"><span class="underline">S</span>ailor Night</li>
-                    </ul>
+    <div class="themeDay" id="temaSeleccionado">
+        <header>
+            <div class="banner barraGradient">
+                <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+            </div>
+        </header>
+        <section id="inicio" class="container inicio">
+            <img class="logo" alt="logo" src="imagenes/gifOF_logo.png">
+            <div class="upper-btn">
+                <div class="boton">Crear guifos</div>
+
+                <label for="themes" class="themes">
+                    <div class="boton">Elegir tema</div>
+                    <div class="boton dropdown"><img alt="dropdown" src="imagenes/dropdown.svg"></div>
+                    <input type="checkbox" id="themes" class="desplegable" checked hidden>
+                    <div class="dropdownTemas">
+                        <ul>
+                            <li id="temaDia"><span class="underline">S</span>ailor Day</li>
+                            <li id="temaNoche"><span class="underline">S</span>ailor Night</li>
+                        </ul>
+                    </div>
+                </label>
+                <p><span class="underline">M</span>is Guifos</p>
+            </div>
+        </section>
+        <section id="buscador" class="container buscador">
+            <div class="search">
+                <h2>Buscar</h2>
+                <div class="seccionBusqueda">
+                    <input type="text" id="searchBar" class="searchBar"
+                        placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+                    <div class="botonBuscar" id="buscar"><img alt="logoLupa" class="lupaBusqueda"
+                            src="imagenes/lupa_inactive.svg">
+                        <p>Buscar</p>
+                    </div>
                 </div>
-            </label>
-           <p><span class="underline">M</span>is Guifos</p>
-        </div>
-    </section>
-    <section id="buscador" class="container buscador">
-        
-        <div class="search">
-            <h2>Buscar</h2>
-            <input type="text" id="searchBar" class="searchBar" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
-        </div>
-    </section>
-
+            </div>
+            <div class="searchRelacionados">
+                <ul>
+                    <li>sugerencia 1</li>
+                    <li>sugerencia 2</li>
+                    <li>sugerencia 3</li>
+                </ul>
+            </div>
+        </section>
+        <section class="container sugerencias">
+            <h3>Hoy te sugerimos:</h3>
+            <div class="bloqueSugerencia">
+                <div class="sugerido" id="sugerido0">
+                    <h2>#Rick&Morty<img alt="boton cerrar" src="imagenes/close.svg"></h2>
+                    <div class="verMas">Ver más…</div>
+                </div>
+                <div class="sugerido" id="sugerido1">
+                    <h2>#BreakingBad<img alt="boton cerrar" src="imagenes/close.svg"></h2>
+                    <div class="verMas">Ver más…</div>
+                </div>
+                <div class="sugerido" id="sugerido2">
+                    <h2>#TheGodfather<img alt="boton cerrar" src="imagenes/close.svg"></h2>
+                    <div class="verMas">Ver más…</div>
+                </div>
+                <div class="sugerido" id="sugerido3">
+                    <h2>#Javascript<img alt="boton cerrar" src="imagenes/close.svg"></h2>
+                    <div class="verMas">Ver más…</div>
+                </div>
+            </div>
+        </section>
+        <section class="container tendencias">
+            <h3>Tendencias:</h3>
+            <div class="trendy"></div>
+        </section>
+    </div>
     <script src="main.js"></script>
-
 </body>
 
 </html>
