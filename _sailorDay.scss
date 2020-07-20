@@ -16,6 +16,9 @@
 
 
     .inicio {
+        .logoNight {
+           display:none;
+        }
         .upper-btn {
             .boton {
                 background-color: $buttonDay;
@@ -57,14 +60,36 @@
             }
 
             .seccionBusqueda {
-
                 .botonBuscar {
                     border: 1px solid #808080;
                     box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 
+                    img {
+                        background-image: url(imagenes/lupa_inactive.svg);
+                        &::before {
+                            display:none;
+                        }
+                    }
+
                     p {
                         color: #B4B4B4;
 
+                    }
+                }
+                
+                .active {
+                    background-color: #F7C9F3;
+                    cursor: pointer;
+
+                    img {
+                        background-image: url(imagenes/lupa.svg);
+                        &::before {
+                            display:none;
+                        }
+                    }
+
+                    p {
+                        color: #110038;
                     }
                 }
             }
@@ -121,7 +146,7 @@
             box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
         }
 
-        .trendy {
+        .gifContainer {
 
             div {
 

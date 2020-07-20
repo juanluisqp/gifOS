@@ -23,7 +23,14 @@
     flex-direction: row;
     justify-content: space-between;
 
+   
     .logo {
+        width: 102.6px;
+        height: 64px;
+        margin: 35px 0 16px 0;
+    }
+
+    .logoNight {
         width: 102.6px;
         height: 64px;
         margin: 35px 0 16px 0;
@@ -151,6 +158,11 @@
                 box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
                 box-sizing: border-box;
                 padding: 10px 30px;
+
+                &:active {
+                    outline: 1px dotted #110038;
+                    outline-offset: -5px;
+                }
 
                 img {
                     width: 16px;
@@ -290,11 +302,13 @@
         box-sizing: border-box;
     }
 
-    .trendy {
+    .gifContainer {
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-auto-rows: 265px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 10px;
+
+        
 
         div {
             position: relative;

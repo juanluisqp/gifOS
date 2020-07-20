@@ -17,6 +17,9 @@
 
 
     .inicio {
+        .logo {
+            display: none;
+        }
 
         .upper-btn {
             .boton {
@@ -81,10 +84,33 @@
                 .botonBuscar {
                     border: 1px solid #808080;
                     box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+                    img {
+                        background-image: url(imagenes/combine_shape.svg);
+                        &::before {
+                            display:none;
+                        }
+                    }
 
                     p {
                         color: #8F8F8F;
 
+                    }
+                }
+
+                .active {
+                    background-color: #CE36DB;
+                    border: 1px solid #110038;
+                    cursor: pointer;
+
+                    img {
+                        background-image: url(imagenes/lupa_light.svg);
+                        &::before {
+                            display:none;
+                        }
+                    }
+
+                    p {
+                        color: $textDay;
                     }
                 }
             }
@@ -119,7 +145,7 @@
                 box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 
                 h2 {
-                    background-image: $barDay;
+                    background-image: $barNight;
                     box-shadow: inset -2px 0 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 
                 }
@@ -141,7 +167,7 @@
             border: 1px solid #2E32FB;
             box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
         }
-        .trendy {
+        .gifContainer {
 
             div {
                 &:hover {

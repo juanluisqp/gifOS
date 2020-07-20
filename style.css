@@ -53,7 +53,7 @@ table {
   font-weight: 400;
 }
 
-.buscador .search h2, .sugerencias .bloqueSugerencia .sugerido h2, .tendencias .trendy div p {
+.buscador .search h2, .sugerencias .bloqueSugerencia .sugerido h2, .tendencias .gifContainer div p {
   font-family: 'Chakra Petch', sans-serif;
   font-weight: 700;
 }
@@ -109,6 +109,12 @@ table {
 }
 
 .inicio .logo {
+  width: 102.6px;
+  height: 64px;
+  margin: 35px 0 16px 0;
+}
+
+.inicio .logoNight {
   width: 102.6px;
   height: 64px;
   margin: 35px 0 16px 0;
@@ -262,6 +268,11 @@ table {
   padding: 10px 30px;
 }
 
+.buscador .search .seccionBusqueda .botonBuscar:active {
+  outline: 1px dotted #110038;
+  outline-offset: -5px;
+}
+
 .buscador .search .seccionBusqueda .botonBuscar img {
   width: 16px;
   height: 16px;
@@ -399,32 +410,31 @@ table {
           box-sizing: border-box;
 }
 
-.tendencias .trendy {
+.tendencias .gifContainer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 265px;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
 }
 
-.tendencias .trendy div {
+.tendencias .gifContainer div {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.tendencias .trendy div img {
+.tendencias .gifContainer div img {
   width: 100%;
   height: 100%;
 }
 
-.tendencias .trendy div img:hover ~ p {
+.tendencias .gifContainer div img:hover ~ p {
   color: #FFFFFF;
 }
 
-.tendencias .trendy div p {
+.tendencias .gifContainer div p {
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -443,6 +453,10 @@ table {
 
 .themeNight .banner p {
   color: #FFFFFF;
+}
+
+.themeNight .inicio .logo {
+  display: none;
 }
 
 .themeNight .inicio .upper-btn .boton {
@@ -503,8 +517,34 @@ table {
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
+.themeNight .buscador .search .seccionBusqueda .botonBuscar img {
+  background-image: url(imagenes/combine_shape.svg);
+}
+
+.themeNight .buscador .search .seccionBusqueda .botonBuscar img::before {
+  display: none;
+}
+
 .themeNight .buscador .search .seccionBusqueda .botonBuscar p {
   color: #8F8F8F;
+}
+
+.themeNight .buscador .search .seccionBusqueda .active {
+  background-color: #CE36DB;
+  border: 1px solid #110038;
+  cursor: pointer;
+}
+
+.themeNight .buscador .search .seccionBusqueda .active img {
+  background-image: url(imagenes/lupa_light.svg);
+}
+
+.themeNight .buscador .search .seccionBusqueda .active img::before {
+  display: none;
+}
+
+.themeNight .buscador .search .seccionBusqueda .active p {
+  color: #FFFFFF;
 }
 
 .themeNight .buscador .searchRelacionados {
@@ -533,8 +573,8 @@ table {
 }
 
 .themeNight .sugerencias .bloqueSugerencia .sugerido h2 {
-  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
   -webkit-box-shadow: inset -2px 0 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px 0 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
@@ -550,14 +590,14 @@ table {
           box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
 }
 
-.themeNight .tendencias .trendy div:hover {
+.themeNight .tendencias .gifContainer div:hover {
   background: #B4B4B4;
   border: 2px solid #5C5C5C;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.themeNight .tendencias .trendy div img:hover ~ p {
+.themeNight .tendencias .gifContainer div img:hover ~ p {
   display: inherit;
   background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
   background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
@@ -574,6 +614,10 @@ table {
 
 .themeDay .banner p {
   color: #FFFFFF;
+}
+
+.themeDay .inicio .logoNight {
+  display: none;
 }
 
 .themeDay .inicio .upper-btn .boton {
@@ -616,8 +660,33 @@ table {
           box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
 }
 
+.themeDay .buscador .search .seccionBusqueda .botonBuscar img {
+  background-image: url(imagenes/lupa_inactive.svg);
+}
+
+.themeDay .buscador .search .seccionBusqueda .botonBuscar img::before {
+  display: none;
+}
+
 .themeDay .buscador .search .seccionBusqueda .botonBuscar p {
   color: #B4B4B4;
+}
+
+.themeDay .buscador .search .seccionBusqueda .active {
+  background-color: #F7C9F3;
+  cursor: pointer;
+}
+
+.themeDay .buscador .search .seccionBusqueda .active img {
+  background-image: url(imagenes/lupa.svg);
+}
+
+.themeDay .buscador .search .seccionBusqueda .active img::before {
+  display: none;
+}
+
+.themeDay .buscador .search .seccionBusqueda .active p {
+  color: #110038;
 }
 
 .themeDay .buscador .searchRelacionados {
@@ -663,14 +732,14 @@ table {
           box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
 }
 
-.themeDay .tendencias .trendy div:hover {
+.themeDay .tendencias .gifContainer div:hover {
   background: #B4B4B4;
   border: 2px solid #B4B4B4;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.themeDay .tendencias .trendy div img:hover ~ p {
+.themeDay .tendencias .gifContainer div img:hover ~ p {
   display: inherit;
   background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
   background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
