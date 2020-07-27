@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Guifos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/style/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="themeDay" id="temaSeleccionado">
+        <div class="banner barraGradient">
+            <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+        </div>
+        <section id="inicio" class="container inicio">
+            <a href="index.html">
+                <div class="backHome">
+                    <img class="arrow" src="imagenes/arrow.svg">
+                    <img class="logo" alt="logo" src="imagenes/gifOF_logo.png">
+                    <img class="logoNight" alt="logo" src="imagenes/gifOF_logo_dark.png">
+                </div>
+            </a>
+            <div class="upper-btn">
+                <a href="guifos.html">
+                    <div class="boton">Crear guifos</div>
+                </a>
+                <label for="themes" class="themes">
+                    <div class="boton">Elegir tema</div>
+                    <div class="boton dropdown"><img alt="dropdown" src="imagenes/dropdown.svg"></div>
+                    <input type="checkbox" id="themes" class="desplegable" checked hidden>
+                    <div class="dropdownTemas">
+                        <ul>
+                            <li id="temaDia"><span class="underline">S</span>ailor Day</li>
+                            <li id="temaNoche"><span class="underline">S</span>ailor Night</li>
+                        </ul>
+                    </div>
+                </label>
+                <a class="misGuifos" href="guifos.html"><span class="underline">M</span>is Guifos</a>
+            </div>
+        </section>
+        <section class="crearGuifos">
+            <div class="instructions">
+                <h2>Crear Guifos</h2>
+                <div class="content">
+                    <img src="imagenes/window img.png">
+                    <h3>Aquí podrás crear tus propios guifos</h3>
+                    <pre class="instrucciones">
+        Crear tu <span>guifo</span> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos 
+        personalizados. Los pasos para crear tu guifo son:
+
+        <span>1)</span> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)
+
+        <span>2)</span> Capturar tu momento guifo
+
+        <span>3)</span> Revisar el momento
+
+        <span>4)</span> Listo para subir y compartir!
+
+        ¿Quieres comenzar a crear tu <span>guifo</span> ahora?
+                    </pre>
+                    <div class="botones">
+                        <div class="boton cancel" id="cancel">Cancelar</div>
+                        <div class="boton start" id="start">Comenzar</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="check">
+            <div class="record">
+                <h2 class="barraGradient" id="recordHeading">Un chequeo antes de empezar <img src="imagenes/close.svg">
+                </h2>
+                <div class="videoContainer">
+                    <video class="video" id="video"></video>
+                    <img class="preview" id="preview" alt="#">
+                    <div class="gifDone">
+                        <h3>Guifo creado con exito!</h3>
+                        <a id="copyLink" href="#">Copiar link</a>
+                        <textarea id="linkGif"></textarea>
+                        <a href="" id="download" download="juan.gif">Descargar</a>
+                    </div>
+                </div>
+
+                <div class="grabar" id="buttons">
+                    <div class="button"><img id="recordLogo" src="imagenes/camera.svg" alt=""></div>
+                    <div class="button" id="capture">Capturar</div>
+
+                </div>
+                <div class="lastInstrucctions">
+                    <div class="grabar repeat">Repetir</div>
+                    <div class="upload" id="upload">Subir Guifo</div>
+                </div>
+                <div class="button done" id="done" >Listo</div>
+
+
+            </div>
+
+
+
+        </section>
+        <section class="container tendencias">
+            <h3 class="divTitle">Mis Guifos</h3>
+            <div class="gifContainer" id="guifosUploaded"></div>
+
+        </section>
+
+    </div>
+
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="misguifos.js"></script>
+
+</body>
+
+</html>

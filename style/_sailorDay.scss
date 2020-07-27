@@ -6,6 +6,7 @@
 
     .barraGradient {
         background-image: $barDay;
+        padding: 4px;
     }
 
     .banner {
@@ -17,8 +18,9 @@
 
     .inicio {
         .logoNight {
-           display:none;
+            display: none;
         }
+
         .upper-btn {
             .boton {
                 background-color: $buttonDay;
@@ -36,7 +38,7 @@
     .dropdownTemas {
 
         ul {
-            background-color: #E6E6E6;
+            background-color: $windowColorDay;
 
             li {
                 background-color: #F0F0F0;
@@ -46,9 +48,9 @@
     }
 
     .buscador {
-       
+
         .search {
-            background: #E6E6E6;
+            background: $windowColorDay;
             box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 
 
@@ -66,8 +68,9 @@
 
                     img {
                         background-image: url(imagenes/lupa_inactive.svg);
+
                         &::before {
-                            display:none;
+                            display: none;
                         }
                     }
 
@@ -76,15 +79,16 @@
 
                     }
                 }
-                
+
                 .active {
-                    background-color: #F7C9F3;
+                    background-color: $buttonDay;
                     cursor: pointer;
 
                     img {
                         background-image: url(imagenes/lupa.svg);
+
                         &::before {
-                            display:none;
+                            display: none;
                         }
                     }
 
@@ -97,15 +101,23 @@
 
         }
 
+        .blueDivContainer {
+
+            div {
+                background-color: #4180F6;
+            }
+        }
+
         .searchRelacionados {
-            background-color: #E6E6E6;
+            background-color: $windowColorDay;
             box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+
             ul {
                 li {
                     background-color: #F0F0F0;
                     border: 1px solid #808080;
                     box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-                    
+
                 }
             }
         }
@@ -130,8 +142,8 @@
                 }
 
                 .verMas {
-
                     background-color: #4180F6;
+
                 }
             }
         }
@@ -165,6 +177,75 @@
                 }
             }
 
+        }
+    }
+
+    .instructions {
+
+        h2 {
+            background-image: $barDay;
+
+        }
+
+        .content {
+            background-color: $windowColorDay;
+
+            .botones {
+
+                .cancel {
+                    background-color: #FFF4FD;
+                }
+
+                .start {
+
+                    background-color: $buttonDay;
+
+                    &:hover {
+                        background-color: $buttonDayHover;
+                    }
+                }
+            }
+
+
+
+        }
+    }
+
+    .check {
+        .record {
+            background-color: $windowColorDay;
+
+            .grabar {
+
+                .button {
+                    background-color: $buttonDay;
+
+                    &:hover {
+                        background-color: $buttonDayHover;
+                    }
+
+                }
+
+            }
+            
+            .lastInstrucctions {
+               
+                .upload {
+                    background-color: $buttonDay;
+                    &:hover {
+                        background-color: $buttonDayHover
+                    }
+                }
+            }
+
+            .done {
+                background-color: $buttonDay;
+
+                &:hover {
+                    background-color: $buttonDayHover;
+                }
+
+            }
         }
     }
 }

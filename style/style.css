@@ -48,17 +48,17 @@ table {
   border-spacing: 0;
 }
 
-.banner p, .inicio .upper-btn .themes .dropdownTemas ul li, .buscador .search .seccionBusqueda .botonBuscar p, .buscador .searchRelacionados ul li, .sugerencias h3, .sugerencias .bloqueSugerencia .sugerido .verMas, .tendencias h3 {
+.banner p, .inicio .upper-btn .themes .dropdownTemas ul li, .buscador .search .seccionBusqueda .botonBuscar p, .buscador .blueDivContainer div, .buscador .searchRelacionados ul li, .sugerencias h3, .sugerencias .bloqueSugerencia .sugerido .verMas, .tendencias h3, .crearGuifos .instructions .content .instrucciones, .crearGuifos .instructions .content .botones .boton, .check .record .videoContainer .gifDone a, .check .record .button, .check .record .stop .button, .check .record .lastInstrucctions .repeat, .check .record .lastInstrucctions .upload {
   font-family: 'Chakra Petch', sans-serif;
   font-weight: 400;
 }
 
-.buscador .search h2, .sugerencias .bloqueSugerencia .sugerido h2, .tendencias .gifContainer div p {
+.buscador .search h2, .sugerencias .bloqueSugerencia .sugerido h2, .tendencias .gifContainer div p, .crearGuifos .instructions h2, .crearGuifos .instructions .content h3, .check h2, .check .record .videoContainer .gifDone h3 {
   font-family: 'Chakra Petch', sans-serif;
   font-weight: 700;
 }
 
-.inicio .upper-btn .boton {
+.inicio .upper-btn a .boton, .inicio .upper-btn .boton {
   width: 144px;
   height: 36px;
   border: 1px solid #110038;
@@ -78,6 +78,11 @@ table {
           align-items: center;
   cursor: pointer;
   margin-left: 16px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .container {
@@ -176,25 +181,44 @@ table {
   cursor: pointer;
 }
 
+.inicio .upper-btn a {
+  color: #110038;
+  text-decoration: none;
+}
+
+.inicio .upper-btn a:active {
+  color: #110038;
+}
+
+.inicio .upper-btn a:visited {
+  color: #110038;
+}
+
 .inicio .upper-btn .dropdown {
   width: 36px;
   margin-left: 0;
 }
 
-.inicio .upper-btn p {
+.inicio .upper-btn .misGuifos {
   padding: 2px 10px 2px 0;
   margin-left: 16px;
   font-family: 'Chakra Petch', sans-serif;
   font-weight: 400;
   cursor: pointer;
+  text-decoration: none;
+  color: #110038;
 }
 
-.inicio .upper-btn p:hover {
+.inicio .upper-btn .misGuifos:hover {
   outline: 1px dotted #110038;
 }
 
-.inicio .upper-btn p:active {
+.inicio .upper-btn .misGuifos:active {
   outline: transparent;
+}
+
+.inicio .upper-btn .misGuifos:visited {
+  color: #110038;
 }
 
 .desplegable:checked ~ .dropdownTemas {
@@ -206,7 +230,7 @@ table {
 }
 
 .buscador .search {
-  margin-bottom: 64px;
+  margin-bottom: 12px;
 }
 
 .buscador .search h2 {
@@ -278,6 +302,32 @@ table {
   height: 16px;
 }
 
+.buscador .blueDivContainer {
+  max-width: 1440px;
+  height: 42px;
+  margin-bottom: 12px;
+  margin-top: 17px;
+  max-width: 1440px;
+}
+
+.buscador .blueDivContainer div {
+  border: 1px solid #4C2F99;
+  -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+  display: inline;
+  padding: 7px;
+  color: #FFFFFF;
+  margin-right: 10px;
+}
+
+.buscador .blueDivContainer div::before {
+  content: '#';
+}
+
+.buscador .blueDivContainer div:hover {
+  cursor: pointer;
+}
+
 .buscador .searchRelacionados {
   position: absolute;
   z-index: 1;
@@ -286,7 +336,7 @@ table {
   padding: 16px 0 17px 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-top: -64px;
+  margin-top: -72px;
   display: none;
 }
 
@@ -343,17 +393,20 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.sugerencias .bloqueSugerencia .sugerido h2::before {
+  content: "#";
+}
+
 .sugerencias .bloqueSugerencia .sugerido h2 img {
   width: 16px;
   height: 14px;
+  position: absolute;
+  right: 5px;
 }
 
 .sugerencias .bloqueSugerencia .sugerido h2 img:hover {
@@ -374,7 +427,6 @@ table {
 
 .sugerencias .bloqueSugerencia .sugerido .verMas {
   color: #FFFFFF;
-  background-color: #2E32FB;
   width: 81px;
   height: 34px;
   position: absolute;
@@ -442,6 +494,342 @@ table {
   display: none;
 }
 
+.backHome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.backHome .arrow {
+  width: 30px;
+  height: auto;
+  position: relative;
+  top: 15px;
+  margin-right: 7px;
+}
+
+.crearGuifos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 75px 378px 153px 378px;
+}
+
+.crearGuifos .instructions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.crearGuifos .instructions h2 {
+  color: #FFFFFF;
+  padding: 4px;
+}
+
+.crearGuifos .instructions .content {
+  position: relative;
+}
+
+.crearGuifos .instructions .content img {
+  position: absolute;
+  display: inline;
+  margin: 30px 16px 0 25px;
+}
+
+.crearGuifos .instructions .content h3 {
+  margin: 30px 0 17px 73px;
+}
+
+.crearGuifos .instructions .content .instrucciones {
+  padding: 20px;
+}
+
+.crearGuifos .instructions .content .instrucciones span {
+  font-weight: bold;
+}
+
+.crearGuifos .instructions .content .botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.crearGuifos .instructions .content .botones .boton {
+  width: 144px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 36px;
+  margin-right: 16px;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  cursor: pointer;
+}
+
+.crearGuifos .instructions .content .botones .boton:last-child {
+  margin-right: 36px;
+}
+
+.check {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 200px;
+}
+
+.check h2 {
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.check .record .videoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.check .record .videoContainer .gifDone {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.check .record .videoContainer .gifDone h3 {
+  margin-top: 43px;
+}
+
+.check .record .videoContainer .gifDone a {
+  background-color: #FFF4FD;
+  width: 256px;
+  height: 36px;
+  margin-right: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #110038;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.check .record .videoContainer .gifDone a:hover {
+  text-decoration: none;
+}
+
+.check .record .videoContainer .gifDone a:active {
+  text-decoration: none;
+  color: #110038;
+}
+
+.check .record .videoContainer .gifDone textarea {
+  display: none;
+}
+
+.check .record .button {
+  width: 36px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.check .record .button:last-child {
+  width: 144px;
+}
+
+.check .record .video {
+  width: 400px;
+  height: auto;
+  margin: 12px;
+}
+
+.check .record .preview {
+  width: 400px;
+  height: auto;
+  margin: 12px;
+  display: none;
+}
+
+.check .record .grabar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 21px 16px 16px;
+  cursor: pointer;
+}
+
+.check .record .stop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 21px 16px 16px;
+  cursor: pointer;
+}
+
+.check .record .stop .button {
+  width: 36px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  background-color: #FF6161;
+}
+
+.check .record .stop .button:last-child {
+  width: 144px;
+  color: #FFFFFF;
+}
+
+.check .record .lastInstrucctions {
+  display: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.check .record .lastInstrucctions .repeat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 144px;
+  height: 36px;
+  margin-right: 14px;
+  margin-bottom: 16px;
+  background: #FFF4FD;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.check .record .lastInstrucctions .upload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 144px;
+  height: 36px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.check .record .done {
+  display: none;
+  margin-left: 55%;
+  margin-bottom: 44px;
+  cursor: pointer;
+}
+
 .themeNight {
   background-color: #110038;
 }
@@ -477,16 +865,20 @@ table {
           filter: invert(100%);
 }
 
-.themeNight .inicio .upper-btn p {
+.themeNight .inicio .upper-btn .misGuifos {
   color: #FFFFFF;
 }
 
-.themeNight .inicio .upper-btn p:hover {
+.themeNight .inicio .upper-btn .misGuifos:hover {
   outline: 1px dotted #FFFFFF;
 }
 
-.themeNight .inicio .upper-btn p:active {
+.themeNight .inicio .upper-btn .misGuifos:active {
   outline: transparent;
+}
+
+.themeNight .inicio .upper-btn .misGuifos:visited {
+  color: #FFFFFF;
 }
 
 .themeNight .dropdownTemas ul {
@@ -547,6 +939,10 @@ table {
   color: #FFFFFF;
 }
 
+.themeNight .buscador .blueDivContainer div {
+  background-color: #2E32FB;
+}
+
 .themeNight .buscador .searchRelacionados {
   background-color: #B4B4B4;
   -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
@@ -603,6 +999,62 @@ table {
   background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
 }
 
+.themeNight .instructions h2 {
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+}
+
+.themeNight .instructions .content {
+  background-color: #B4B4B4;
+}
+
+.themeNight .instructions .content .botones .cancel {
+  background-color: #FFF4FD;
+}
+
+.themeNight .instructions .content .botones .start {
+  color: #FFFFFF;
+  background-color: #EE3EFE;
+}
+
+.themeNight .instructions .content .botones .start:hover {
+  background-color: #CE36DB;
+}
+
+.themeNight .check .record {
+  background-color: #B4B4B4;
+}
+
+.themeNight .check .record .grabar .button {
+  background-color: #EE3EFE;
+  color: #FFFFFF;
+}
+
+.themeNight .check .record .grabar .button:hover {
+  background-color: #CE36DB;
+}
+
+.themeNight .check .record .grabar .button img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.themeNight .check .record .lastInstrucctions .upload {
+  background-color: #EE3EFE;
+}
+
+.themeNight .check .record .lastInstrucctions .upload:hover {
+  background-color: #CE36DB;
+}
+
+.themeNight .check .record .done {
+  background-color: #EE3EFE;
+}
+
+.themeNight .check .record .done:hover {
+  background-color: #CE36DB;
+}
+
 .themeDay {
   background-color: #fff4fd;
 }
@@ -610,6 +1062,7 @@ table {
 .themeDay .barraGradient {
   background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
   background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  padding: 4px;
 }
 
 .themeDay .banner p {
@@ -689,6 +1142,10 @@ table {
   color: #110038;
 }
 
+.themeDay .buscador .blueDivContainer div {
+  background-color: #4180F6;
+}
+
 .themeDay .buscador .searchRelacionados {
   background-color: #E6E6E6;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
@@ -743,5 +1200,54 @@ table {
   display: inherit;
   background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
   background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+}
+
+.themeDay .instructions h2 {
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+}
+
+.themeDay .instructions .content {
+  background-color: #E6E6E6;
+}
+
+.themeDay .instructions .content .botones .cancel {
+  background-color: #FFF4FD;
+}
+
+.themeDay .instructions .content .botones .start {
+  background-color: #F7C9F3;
+}
+
+.themeDay .instructions .content .botones .start:hover {
+  background-color: #E6BBE2;
+}
+
+.themeDay .check .record {
+  background-color: #E6E6E6;
+}
+
+.themeDay .check .record .grabar .button {
+  background-color: #F7C9F3;
+}
+
+.themeDay .check .record .grabar .button:hover {
+  background-color: #E6BBE2;
+}
+
+.themeDay .check .record .lastInstrucctions .upload {
+  background-color: #F7C9F3;
+}
+
+.themeDay .check .record .lastInstrucctions .upload:hover {
+  background-color: #E6BBE2;
+}
+
+.themeDay .check .record .done {
+  background-color: #F7C9F3;
+}
+
+.themeDay .check .record .done:hover {
+  background-color: #E6BBE2;
 }
 /*# sourceMappingURL=style.css.map */
