@@ -1,0 +1,251 @@
+@import "_paletaDeColores.scss";
+
+.themeDay {
+
+    background-color: $bodyDay;
+
+    .barraGradient {
+        background-image: $barDay;
+        padding: 4px;
+    }
+
+    .banner {
+        p {
+            color: $textDay;
+        }
+    }
+
+
+    .inicio {
+        .logoNight {
+            display: none;
+        }
+
+        .upper-btn {
+            .boton {
+                background-color: $buttonDay;
+
+                &:hover {
+                    background-color: $buttonDayHover;
+                    outline: 1px dotted #110038;
+                    outline-offset: -5px;
+                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                }
+            }
+        }
+    }
+
+    .dropdownTemas {
+
+        ul {
+            background-color: $windowColorDay;
+
+            li {
+                background-color: #F0F0F0;
+
+            }
+        }
+    }
+
+    .buscador {
+
+        .search {
+            background: $windowColorDay;
+            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+
+
+            h2 {
+                background-image: $barDay;
+                color: $textDay;
+                box-shadow: inset -2px 0 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+
+            }
+
+            .seccionBusqueda {
+                .botonBuscar {
+                    border: 1px solid #808080;
+                    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+
+                    img {
+                        background-image: url(imagenes/lupa_inactive.svg);
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+
+                    p {
+                        color: #B4B4B4;
+
+                    }
+                }
+
+                .active {
+                    background-color: $buttonDay;
+                    cursor: pointer;
+
+                    img {
+                        background-image: url(imagenes/lupa.svg);
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+
+                    p {
+                        color: #110038;
+                    }
+                }
+            }
+
+
+        }
+
+        .blueDivContainer {
+
+            div {
+                background-color: #4180F6;
+            }
+        }
+
+        .searchRelacionados {
+            background-color: $windowColorDay;
+            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+
+            ul {
+                li {
+                    background-color: #F0F0F0;
+                    border: 1px solid #808080;
+                    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+
+                }
+            }
+        }
+    }
+
+    .sugerencias {
+        h3 {
+            background-color: #FFFAFE;
+            border: 1px solid #E6BBE2;
+            box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+
+        }
+
+        .bloqueSugerencia {
+            .sugerido {
+                box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+
+                h2 {
+                    background-image: $barDay;
+                    box-shadow: inset -2px 0 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+
+                }
+
+                .verMas {
+                    background-color: #4180F6;
+
+                }
+            }
+        }
+
+
+    }
+
+    .tendencias {
+        h3 {
+            background-color: #FFFAFE;
+            border: 1px solid #E6BBE2;
+            box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+        }
+
+        .gifContainer {
+
+            div {
+
+                &:hover {
+                    background: #B4B4B4;
+                    border: 2px solid #B4B4B4;
+                    box-sizing: border-box;
+                }
+
+                img {
+                    &:hover~p {
+                        display: inherit;
+                        background-image: $barDay;
+                    }
+
+                }
+            }
+
+        }
+    }
+
+    .instructions {
+
+        h2 {
+            background-image: $barDay;
+
+        }
+
+        .content {
+            background-color: $windowColorDay;
+
+            .botones {
+
+                .cancel {
+                    background-color: #FFF4FD;
+                }
+
+                .start {
+
+                    background-color: $buttonDay;
+
+                    &:hover {
+                        background-color: $buttonDayHover;
+                    }
+                }
+            }
+
+
+
+        }
+    }
+
+    .check {
+        .record {
+            background-color: $windowColorDay;
+
+            .grabar {
+
+                .button {
+                    background-color: $buttonDay;
+
+                    &:hover {
+                        background-color: $buttonDayHover;
+                    }
+
+                }
+
+            }
+            
+            .lastInstrucctions {
+               
+                .upload {
+                    background-color: $buttonDay;
+                    &:hover {
+                        background-color: $buttonDayHover
+                    }
+                }
+            }
+
+            .done {
+                background-color: $buttonDay;
+
+                &:hover {
+                    background-color: $buttonDayHover;
+                }
+
+            }
+        }
+    }
+}
